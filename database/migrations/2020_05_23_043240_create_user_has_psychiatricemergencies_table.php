@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserHasPsychiatricemergenciesTable extends Migration
+class CreateUsersHasPsychiatricemergenciesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,10 @@ class CreateUserHasPsychiatricemergenciesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('users_has_psychiatricemergencies',function(Blueprint $table){
+            $table->is_integer('users_id');
+            $table->is_integer('psychiatricemergencies_id');
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class CreateUserHasPsychiatricemergenciesTable extends Migration
      */
     public function down()
     {
-        //
+        dropIfExists('users_has_psychiatricemergencies');
     }
 }

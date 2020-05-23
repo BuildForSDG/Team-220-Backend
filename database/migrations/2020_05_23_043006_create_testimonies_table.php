@@ -19,6 +19,7 @@ class CreateTestimoniesTable extends Migration
             $table->string('content',1000);
             $table->string('linkToDetail', 255);
             $table->string('linkToImage', 255);
+            $table->is_integer('centers_id');
         });
     }
 
@@ -29,6 +30,6 @@ class CreateTestimoniesTable extends Migration
      */
     public function down()
     {
-        Schema::DropIfExist('testimonies');
+        Schema::dropIfExists('testimonies');
     }
 }

@@ -25,6 +25,7 @@ class CreateProfessionalsTable extends Migration
             $table->string('type', 255);
             $table->string('website', 255);
             $table->string('linkToImage', 255);
+            $table->is_integer('centers_id');
         });
     }
 
