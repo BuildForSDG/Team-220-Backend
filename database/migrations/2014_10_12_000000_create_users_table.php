@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->is_integer('roles_id');
         });
     }
-
+  
     /**
      * Reverse the migrations.
      *
