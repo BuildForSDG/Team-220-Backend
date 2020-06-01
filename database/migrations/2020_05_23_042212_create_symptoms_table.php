@@ -17,7 +17,7 @@ class CreateSymptomsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->string('linkToDetails');
+            $table->string('details');
 
         });
     }

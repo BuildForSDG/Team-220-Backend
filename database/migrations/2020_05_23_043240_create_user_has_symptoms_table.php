@@ -13,7 +13,7 @@ class CreateUserHasSymptomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_has_symptoms',function(Blueprint $table){
+        Schema::create('users_symptoms',function(Blueprint $table){
             $table->unsignedBigInteger('users_id');
             $table->unsignedBigInteger('symptoms_id');
         });
@@ -26,7 +26,7 @@ class CreateUserHasSymptomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('symptoms');
+        Schema::dropIfExists('users_symptoms');
 
     }
 }

@@ -15,15 +15,14 @@ class CreateCentersTable extends Migration
     {
         Schema::create('centers', function(Blueprint $table){
             $table->id();
-            $table->string('name', 255);
-            $table->string('description', 255);
-            $table->string('location', 255);
-            $table->string('phoneNumbers', 255);
-            $table->string('email', 255);
-            // to be public or private center
-            $table->string('type', 255);
-            $table->string('website', 255);
-            $table->string('linkToImage', 255);
+            $table->string('name');
+            $table->string('description');
+            $table->string('location');
+            $table->string('phoneNumbers');
+            $table->string('email');
+            $table->enum('type',['public','private']);
+            $table->string('website');
+            $table->string('image');
         });
     }
 

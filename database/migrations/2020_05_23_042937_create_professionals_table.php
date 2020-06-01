@@ -15,16 +15,16 @@ class CreateProfessionalsTable extends Migration
     {
         Schema::create('professionals', function(Blueprint $table){
             $table->id();
-            $table->string('firstName', 255);
-            $table->string('lastName', 255);
-            $table->string('description',1000);
-            $table->string('location',255); 
-            $table->string('phoneNumbers', 255);
-            $table->string('email', 255);
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->text('description');
+            $table->string('location');
+            $table->string('phone_numbers');
+            $table->string('email');
             // to be public or private center
-            $table->string('type', 255);
-            $table->string('website', 255);
-            $table->string('linkToImage', 255);
+            $table->string('type');
+            $table->string('website');
+            $table->string('image');
             $table->unsignedBigInteger('centers_id');
         });
     }

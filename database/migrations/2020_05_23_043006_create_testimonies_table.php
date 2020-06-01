@@ -15,10 +15,10 @@ class CreateTestimoniesTable extends Migration
     {
         Schema::create('testimonies', function(Blueprint $table){
             $table->id();
-            $table->string('title', 255);
-            $table->string('content',1000);
-            $table->string('linkToDetail', 255);
-            $table->string('linkToImage', 255);
+            $table->string('title');
+            $table->text('content');
+            $table->string('detail');
+            $table->string('image');
             $table->unsignedBigInteger('centers_id');
         });
     }
