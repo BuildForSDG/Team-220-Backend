@@ -14,7 +14,7 @@ class CreateCentersTable extends Migration
     public function up()
     {
         Schema::create('centers', function(Blueprint $table){
-            $table->increments('idcenter');
+            $table->id();
             $table->string('name', 255);
             $table->string('description', 255);
             $table->string('location', 255);

@@ -14,12 +14,12 @@ class CreateTestimoniesTable extends Migration
     public function up()
     {
         Schema::create('testimonies', function(Blueprint $table){
-            $table->increments('idTestimonie');
+            $table->id();
             $table->string('title', 255);
             $table->string('content',1000);
             $table->string('linkToDetail', 255);
             $table->string('linkToImage', 255);
-            $table->is_integer('centers_id');
+            $table->unsignedBigInteger('centers_id');
         });
     }
 

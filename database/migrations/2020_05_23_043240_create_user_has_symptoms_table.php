@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRolesTable extends Migration
+class CreateUserHasSymptomsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function(Blueprint $table){
-            $table->id();
-            $table->string('name', 255);
-            
+        Schema::create('users_has_symptoms',function(Blueprint $table){
+            $table->unsignedBigInteger('users_id');
+            $table->unsignedBigInteger('symptoms_id');
         });
     }
 
@@ -27,6 +26,7 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        schema::dropIfExists ('roles');
+        Schema::dropIfExists('symptoms');
+
     }
 }

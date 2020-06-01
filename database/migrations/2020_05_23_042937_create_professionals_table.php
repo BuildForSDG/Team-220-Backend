@@ -14,7 +14,7 @@ class CreateProfessionalsTable extends Migration
     public function up()
     {
         Schema::create('professionals', function(Blueprint $table){
-            $table->increments('idProfessional');
+            $table->id();
             $table->string('firstName', 255);
             $table->string('lastName', 255);
             $table->string('description',1000);
@@ -25,7 +25,7 @@ class CreateProfessionalsTable extends Migration
             $table->string('type', 255);
             $table->string('website', 255);
             $table->string('linkToImage', 255);
-            $table->is_integer('centers_id');
+            $table->unsignedBigInteger('centers_id');
         });
     }
 
