@@ -48,7 +48,7 @@ class User extends Authenticatable
 
     public function psychiatricemergencies()
     {
-        return $this->belongToMany('App\Psychiatricemergencie');
+        return $this->belongToMany('App\Symptoms');
     }
 }
 
